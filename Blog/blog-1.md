@@ -19,7 +19,10 @@ console.log(getVehicleType("bike")); // ✅ Valid
 // console.log(getVehicleType("bus")); // ❌ Error: Argument of type '"bus"' is not assignable to parameter of type 'Vehicle'.
 
 
-## Example: Intrsection (&)
+## Intersection Types (&)
+## Intersection types combine multiple types into one. A variable of an intersection type must satisfy all the constituent types.
+
+Example:
 
 type User = {
   name: string;
