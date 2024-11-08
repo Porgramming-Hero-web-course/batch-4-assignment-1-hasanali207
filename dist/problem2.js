@@ -5,5 +5,5 @@ const removeDuplicates = (arr) => {
     const newArray = arr.filter((item, index) => arr.indexOf(item) === index);
     return newArray;
 };
-removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
-// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+// removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
