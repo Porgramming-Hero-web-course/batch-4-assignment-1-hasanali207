@@ -1,26 +1,50 @@
-🛠️ Mastering TypeScript: Union vs. Intersection Types 🚀
+## 🌟 Significance of Union and Intersection Types in TypeScript
 
-Understanding Union (|) and Intersection (&) types in TypeScript can take your coding to the next level!
+TypeScript provides **union** and **intersection** types to create flexible and precise type definitions. These types are essential for modeling complex data structures and enforcing stricter type checks in your codebase.
 
-Union Types (|):
+### 1. **Union Types (`|`)**
 
-Union types allow a variable to be of multiple types, giving you more flexibility.
+Union types allow a variable to hold values of **multiple possible types**. It is useful when a value could be one of several types.
 
-Example: type UserInput = string | number;
+#### **Example:**
 
-Use Case: When a function can accept different data types (like a form input that handles both text and numbers).
+```typescript
+type Vehicle = "car" | "bike" | "truck";
 
-Intersection Types (&):
+function getVehicleType(vehicle: Vehicle): string {
+  return `Selected vehicle type is: ${vehicle}`;
+}
 
-Intersection types combine multiple types into one, ensuring the variable satisfies all the combined types.
-Example:
+console.log(getVehicleType("car")); // ✅ Valid
+console.log(getVehicleType("bike")); // ✅ Valid
+// console.log(getVehicleType("bus")); // ❌ Error: Argument of type '"bus"' is not assignable to parameter of type 'Vehicle'.
 
-Type Person = { name: string } & { age: number };
 
-Use Case: When you need an object to meet requirements from multiple interfaces.
 
-Why Use Them?
-Enhanced type safety
-More flexible and robust code
-Better code readability
-Level up your TypeScript skills by mastering these powerful types!
+### 1. **Intersection Types (`&`)**
+
+Intersection types combine multiple types into one. A variable of an intersection type must satisfy all the constituent types.
+
+#### **Example:**
+
+type User = {
+  name: string;
+  email: string;
+};
+
+type Admin = {
+  isAdmin: boolean;
+};
+
+type AdminUser = User & Admin;
+
+const admin: AdminUser = {
+  name: "Hasan Ali",
+  email: "hasan@example.com",
+  isAdmin: true,
+};
+
+console.log(
+  `Admin Name: ${admin.name}, Email: ${admin.email}, Is Admin: ${admin.isAdmin}`
+);
+```
