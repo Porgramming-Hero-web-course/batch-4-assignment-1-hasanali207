@@ -10,4 +10,4 @@ function sumoOfArray(arr: number[]): number {
 
 const sumArray: number[] = [1, 2, 3, 4];
 
-// console.log(sumoOfArray(sumArray));
+console.log(sumoOfArray(sumArray));
