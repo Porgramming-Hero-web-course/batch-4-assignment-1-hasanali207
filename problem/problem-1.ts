@@ -8,6 +8,12 @@ function sumoOfArray(arr: number[]): number {
   return sum;
 }
 
-const sumArray: number[] = [1, 2, 3, 4];
+const sumArray: number[] = [1, 2, 3, 4, 5];
 
 console.log(sumoOfArray(sumArray));
+
+// Sample Input:
+// sumArray([1, 2, 3, 4, 5]);
+
+// // Sample Output:
+// 15;

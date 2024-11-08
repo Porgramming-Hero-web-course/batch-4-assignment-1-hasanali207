@@ -17,8 +17,7 @@ type Shape = Circle | Rectangle;
 const calculateShapeArea = (shape: Shape): number => {
   if (shape.shape === "circle") {
     const circleArea = Math.PI * shape.radius ** 2;
-
-    return circleArea;
+    return parseFloat(circleArea.toFixed(2));
   } else {
     const rectangleArea = shape.width * shape.height;
 
@@ -29,3 +28,8 @@ const calculateShapeArea = (shape: Shape): number => {
 console.log(calculateShapeArea({ shape: "circle", radius: 5 }));
 
 console.log(calculateShapeArea({ shape: "rectangle", width: 4, height: 6 }));
+
+//  Sample Output 1:
+// 78.54;
+// Sample Output 2:
+// 24;
